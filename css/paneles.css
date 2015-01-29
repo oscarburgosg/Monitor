@@ -3,7 +3,7 @@
 .ingreso{
 	background-color: #fff;
     border: 1px solid transparent;
-    border-radius: 4px;
+    border-radius: 2px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     margin: 25% auto 20px;
     padding: 5px 10px;
@@ -485,7 +485,7 @@ html{
 
 @media (max-width: 640px) {
     html{
-border-left:red solid 10px;
+border-left:purple solid 1px;
     }
 
     .box_destacar strong{
@@ -496,11 +496,16 @@ border-left:red solid 10px;
     .content_connector .barra{
         width: 175%;
     }
+
+    .ingreso {
+        margin: 15% auto 1px;
+        width: 98%;
+    }
 }
 
 @media (max-width: 568px) {
     html{
-border-left:orange solid 10px;
+border-left:orange solid 1px;
     }
 
     .content_connector .barra{
@@ -509,20 +514,19 @@ border-left:orange solid 10px;
 }
 @media (max-width: 480px) {
 html{
-border-left:green solid 10px;
+border-left:green solid 1px;
 }
 
 }
 @media (max-width: 450px) {
 html{
-    border-left:red solid 10px;
+    border-left:red solid 1px;
 }
 
 .content_connector .barra{
         width: 210%;
     }
 }
-
 
 .collapse .panel{
     border:#999 solid 1px;
