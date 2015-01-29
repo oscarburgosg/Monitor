@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-		<title>Salfa MAPA</title>
+		<title>Salfa MONITOR</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,8 +21,10 @@
 
     	<!-- PANELES -->
 		<link rel="stylesheet" type="text/css" href="css/paneles.css">
+		<link rel="stylesheet" type="text/css" href="css/comun.css">
 
 		<script language="JavaScript">
+
 			function login(id){
 			
 			var login = $("#login");
@@ -103,7 +105,7 @@
 </head>
 <body>
 		
-    <div id="login" class="ingreso" style="display:block;">
+    <div id="login" class="ingreso" style="display:none;">
 		<div class="box_ingreso">
 			<select class="form-control">
 			  <option>Norman Riquelme</option>
@@ -120,7 +122,7 @@
 		<div class="clear"></div>
 	</div>
         
-    <div id="contenido_a_mostrar" class="lista_tareas" style="display:none;">
+    <div id="contenido_a_mostrar" class="flujo" style="display:block;">
 		<div class="panel panel-default">
 			<div class="panel-body col-xs-12 col-sm-12 panel_categorias">
 			    <div class="row">
@@ -131,21 +133,50 @@
 						    <span class="badge">14</span>
 						  </div>
 						</div>
+						<div class="connector uno">
+							<div class="down"></div>
+						</div>
+						<div class="clear"></div>
 						<div class="panel panel-default">
 						  <div class="panel-body">
 						    Recepcionados
 						    <span class="badge">10</span>
 						  </div>
 						</div>
+						<div class="connector dos">
+							<div class="down"></div>
+						</div>
+						<div class="clear"></div>
 						<div class="panel panel-default">
 						  <div class="panel-body">
 						    Preevaluados
 						    <span class="badge">7</span>
 						  </div>
 						</div>
+						<div class="connector uno">
+							<div class="down"></div>
+						</div>
+						<div class="content_connector dos">
+							<div class="connector up">
+								<div class="barra">
+									<div class="barra_up">
+										<div class="right"></div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
 					</div>
-					<div class="col-md-4 col-xs-4">
-						
+					<div class="col-md-4 col-xs-4 content_connector">
+						<div class="connector up">
+							<div class="barra">
+								<div class="barra_up"></div>
+								<div class="barra">
+									<div class="right"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 	                <div class="col-md-4 col-xs-4">
 						<div class="panel panel-default">
@@ -154,44 +185,66 @@
 						    <span class="badge">2</span>
 						  </div>
 						</div>
+						<div class="connector uno">
+							<div class="down"></div>
+						</div>
 						<div class="panel panel-default">
 						  <div class="panel-body">
 						    En espera Cliente
 						    <span class="badge">9</span>
 						  </div>
 						</div>
+						<div class="connector uno">
+							<div class="down"></div>
+						</div>
 						<div class="panel panel-default">
-						  <div class="panel-body">
-						    Aprobados por cliente
-						    <span class="badge">5</span>
-						  </div>
+						    <div class="panel-body">
+							    Aprobados por cliente
+							    <span class="badge">5</span>
+						    </div>
+						  	<div class="content_connector dos tres">
+								<div class="connector up">
+									<div class="barra">
+										<div class="barra_up">
+											<div class="left"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="connector uno">
+							<div class="down"></div>
 						</div>
 					</div>
 	            </div>
 
 	            <div class="row">
 	                <div class="col-md-4 col-xs-4">
-						<div class="panel panel-default">
-						  <div id="boton_ver" class="panel-body boton" onclick="ver_detalle('detalle_camiones')">
+	                	<div class="panel panel-default">
+						    <div id="boton_ver" class="panel-body boton" onclick="ver_detalle('detalle_camiones')">
 						  		En Diagnóstico
 						    	<span class="badge">2</span>
-						  </div>
+						    </div>
 						</div>
 					</div>
 					<div class="col-md-4 col-xs-4">
-						<div class="panel panel-success">
+						<div class="panel panel-success en_espera">
 						  <div id="boton_enespera" class="panel-body boton" onclick="detalle_enespera('detalle_enespera')">
 						    En espera
 						    <span class="badge">18</span>
 						  </div>
 						</div>
 					</div>
-	                <div class="col-md-4 col-xs-4">
+	                <div class="col-md-4 col-xs-4 ">
 						<div class="panel panel-default">
 						  <div class="panel-body">
 						    En reparación
 						    <span class="badge">9</span>
 							</div>
+						</div>
+						<div class="connector uno">
+							<div class="down"></div>
 						</div>
 						<div class="panel panel-default">
 						  <div class="panel-body">
@@ -199,21 +252,39 @@
 						    <span class="badge">7</span>
 							</div>
 						</div>
+						<div class="connector uno">
+							<div class="down"></div>
+						</div>
 					</div>
 	            </div>
 
 	            <div class="row">
-	                <div class="col-md-4 col-xs-4">
+	                <div class="col-md-4 col-xs-4 content_connector">
 						<div class="panel panel-default">
 						  <div class="panel-body">
+						  	<div class="connector down">
+								<div class="down"></div>
+								<div class="barra">
+									<div class="barra_down">
+										
+									</div>
+									<div class="barra_small"></div>
+								</div>
+							</div>
 						    Por Retirar
 						    <span class="badge">3</span>
 						  </div>
 						</div>
+						<div class="connector left">
+							<div class="left"></div>
+						</div>
 					</div>
-					<div class="col-md-4 col-xs-4">
+					<div class="col-md-4 col-xs-4 content_connector">
 						<div class="panel panel-default">
 						  <div class="panel-body">
+						  	<div class="connector down">
+								<div class="down"></div>
+							</div>
 						    Por Regularizar
 						    <span class="badge">3</span>
 						  </div>
@@ -228,517 +299,529 @@
 						</div>
 					</div>
 	            </div>
-		
+				<div class="clear"></div>
             </div>
         </div>
+		 <div class="clear"></div>
 	</div>
-	
+
 	<div id="detalle_camiones" style="display:none;">
-		<div class="panel-heading">
-			En Diagnóstico
-		<button type="button" class="btn btn-default pull-right" onclick="ver_detalle('detalle_camiones')"><span class="glyphicon glyphicon-arrow-left"></span></button>
-		<div class="clear"></div>
-		</div>
-		<div class="panel-body col-xs-12 col-sm-12 detalle_camiones">
-			<div class="panel panel-default boton mantencion" onclick="detalle_camion('detalle_camion')">
-				<div class="col-md-1 col-xs-1">
-					<div class="panel-body">
-					 	<div class="estado"></div>
+		<div class="panel panel-default no-border no-bg">
+			<div class="panel-heading panel-head no-border">
+				En Diagnóstico
+				<button type="button" class="btn btn-default pull-right" onclick="ver_detalle('detalle_camiones')">
+					<span class="glyphicon glyphicon-arrow-left"></span>
+				</button>
+				<div class="clear"></div>
+			</div>
+			<div class="panel panel-default no-border no-bg">
+				<div class="panel panel-default boton mantencion" onclick="detalle_camion('detalle_camion')">
+					<div class="col-md-1 col-xs-1">
+						<div class="panel-body">
+						 	<div class="estado"></div>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-1 col-xs-1">
-					<div class="panel-body">
-					 	<div class="tipo"></div>
+					<div class="col-md-1 col-xs-1">
+						<div class="panel-body">
+						 	<div class="tipo"></div>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-4 col-xs-4">
-				 	<div class="panel-body">
-						Constructora Excon<br/>
-						FD TR 47 – NI : 142
+					<div class="col-md-4 col-xs-4">
+					 	<div class="panel-body">
+							Constructora Excon<br/>
+							FD TR 47 – NI : 142
+						</div>
 					</div>
-				</div>
-				<div class="col-md-2 col-xs-2">
-				 	<div class="panel-body">
-						Recepción: (7)<br/>
-						21/11  9:15 AM
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body">
+							Recepción: (7)<br/>
+							21/11  9:15 AM
+						</div>
 					</div>
-				</div>
-				<div class="col-md-2 col-xs-2">
-				 	<div class="panel-body box_progress">
-				 		<div class="barra">
-					 		<div class="progress">
-								<div class="progress-bar progress-bar-warning" style="width: 100%">
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body box_progress">
+					 		<div class="barra">
+						 		<div class="progress">
+									<div class="progress-bar progress-bar-warning" style="width: 100%">
+									</div>
 								</div>
+								<span class="sr-only">100%</span>
 							</div>
-							<span class="sr-only">100%</span>
-						</div>
-						<div class="barra">
-							<div class="progress">
-							  <div class="progress-bar progress-bar-success" style="width: 50%">
-							  </div>
+							<div class="barra">
+								<div class="progress">
+								  <div class="progress-bar progress-bar-success" style="width: 50%">
+								  </div>
+								</div>
+								<span class="sr-only">50%</span>
 							</div>
-							<span class="sr-only">50%</span>
 						</div>
 					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body">
+							Prom. entrega:<br/>
+							Por definir
+						</div>
+					</div>
+					<div class="clear"></div>
 				</div>
-				<div class="col-md-2 col-xs-2">
-				 	<div class="panel-body">
-						Prom. entrega:<br/>
-						Por definir
+				<div class="panel panel-default boton reparacion" onclick="detalle_camion('detalle_camion')">
+					<div class="col-md-1 col-xs-1">
+						<div class="panel-body">
+						 	<div class="estado"></div>
+						</div>
 					</div>
+					<div class="col-md-1 col-xs-1">
+						<div class="panel-body">
+						 	<div class="tipo"></div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-4">
+					 	<div class="panel-body">
+							Constructora Excon<br/>
+							FD TR 47 – NI : 142
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body">
+							Recepción: (7)<br/>
+							21/11  9:15 AM
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body box_progress">
+					 		<div class="barra">
+						 		<div class="progress">
+									<div class="progress-bar progress-bar-warning" style="width: 100%">
+									</div>
+								</div>
+								<span class="sr-only">100%</span>
+							</div>
+							<div class="barra">
+								<div class="progress">
+								  <div class="progress-bar progress-bar-success" style="width: 50%">
+								  </div>
+								</div>
+								<span class="sr-only">50%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body">
+							Prom. entrega:<br/>
+							Por definir
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="panel panel-default boton reparacion" onclick="detalle_camion('detalle_camion')">
+					<div class="col-md-1 col-xs-1">
+						<div class="panel-body">
+						 	<div class="estado"></div>
+						</div>
+					</div>
+					<div class="col-md-1 col-xs-1">
+						<div class="panel-body">
+						 	<div class="tipo maquinaria"></div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-4">
+					 	<div class="panel-body">
+							Constructora Excon<br/>
+							FD TR 47 – NI : 142
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body">
+							Recepción: (7)<br/>
+							21/11  9:15 AM
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body box_progress">
+					 		<div class="barra">
+						 		<div class="progress">
+									<div class="progress-bar progress-bar-warning" style="width: 100%">
+									</div>
+								</div>
+								<span class="sr-only">100%</span>
+							</div>
+							<div class="barra">
+								<div class="progress">
+								  <div class="progress-bar progress-bar-success" style="width: 50%">
+								  </div>
+								</div>
+								<span class="sr-only">50%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body">
+							Prom. entrega:<br/>
+							Por definir
+						</div>
+					</div>
+					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
 			</div>
-			<div class="panel panel-default boton reparacion" onclick="detalle_camion('detalle_camion')">
-				<div class="col-md-1 col-xs-1">
-					<div class="panel-body">
-					 	<div class="estado"></div>
-					</div>
-				</div>
-				<div class="col-md-1 col-xs-1">
-					<div class="panel-body">
-					 	<div class="tipo"></div>
-					</div>
-				</div>
-				<div class="col-md-4 col-xs-4">
-				 	<div class="panel-body">
-						Constructora Excon<br/>
-						FD TR 47 – NI : 142
-					</div>
-				</div>
-				<div class="col-md-2 col-xs-2">
-				 	<div class="panel-body">
-						Recepción: (7)<br/>
-						21/11  9:15 AM
-					</div>
-				</div>
-				<div class="col-md-2 col-xs-2">
-				 	<div class="panel-body box_progress">
-				 		<div class="barra">
-					 		<div class="progress">
-								<div class="progress-bar progress-bar-warning" style="width: 100%">
-								</div>
-							</div>
-							<span class="sr-only">100%</span>
-						</div>
-						<div class="barra">
-							<div class="progress">
-							  <div class="progress-bar progress-bar-success" style="width: 50%">
-							  </div>
-							</div>
-							<span class="sr-only">50%</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2 col-xs-2">
-				 	<div class="panel-body">
-						Prom. entrega:<br/>
-						Por definir
-					</div>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="panel panel-default boton reparacion" onclick="detalle_camion('detalle_camion')">
-				<div class="col-md-1 col-xs-1">
-					<div class="panel-body">
-					 	<div class="estado"></div>
-					</div>
-				</div>
-				<div class="col-md-1 col-xs-1">
-					<div class="panel-body">
-					 	<div class="tipo maquinaria"></div>
-					</div>
-				</div>
-				<div class="col-md-4 col-xs-4">
-				 	<div class="panel-body">
-						Constructora Excon<br/>
-						FD TR 47 – NI : 142
-					</div>
-				</div>
-				<div class="col-md-2 col-xs-2">
-				 	<div class="panel-body">
-						Recepción: (7)<br/>
-						21/11  9:15 AM
-					</div>
-				</div>
-				<div class="col-md-2 col-xs-2">
-				 	<div class="panel-body box_progress">
-				 		<div class="barra">
-					 		<div class="progress">
-								<div class="progress-bar progress-bar-warning" style="width: 100%">
-								</div>
-							</div>
-							<span class="sr-only">100%</span>
-						</div>
-						<div class="barra">
-							<div class="progress">
-							  <div class="progress-bar progress-bar-success" style="width: 50%">
-							  </div>
-							</div>
-							<span class="sr-only">50%</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2 col-xs-2">
-				 	<div class="panel-body">
-						Prom. entrega:<br/>
-						Por definir
-					</div>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="clear"></div>
 		</div>
 	
 	</div>
 
 	<div id="detalle_camion" style="display:none;">
-		<div class="panel-heading">
-			<button type="button" class="btn btn-default pull-right" onclick="detalle_camion('detalle_camion')"><span class="glyphicon glyphicon-arrow-left"></span></button>
-			<div class="clear"></div>
-		</div>
-		<div class="panel-body col-xs-12 col-sm-12 detalle_camion">
-			<div class="panel panel-default">
-				<div class="col-md-3 col-xs-3">
-				 	<div class="panel-body">
-						Constructora Excon<br/>
-						FD TR 47 – NI : 142<br/>
-						KM : 9.999<br/>
-						Hr : --
+		<div class="panel panel-default no-border no-bg">
+			<div class="panel-heading panel-head no-border">
+				<button type="button" class="btn btn-default pull-right" onclick="detalle_camion('detalle_camion')"><span class="glyphicon glyphicon-arrow-left"></span></button>
+				<div class="clear"></div>
+			</div>
+			<div class="panel panel-default no-border no-bg">
+				<div class="panel panel-default">
+					<div class="col-md-3 col-xs-3">
+					 	<div class="panel-body">
+							Constructora Excon<br/>
+							FD TR 47 – NI : 142<br/>
+							KM : 9.999<br/>
+							Hr : --
+						</div>
 					</div>
-				</div>
-				<div class="col-md-3 col-xs-3">
-				 	<div class="panel-body">
-						Recepción:<br/>
-						21/11  9:15 AM
+					<div class="col-md-3 col-xs-3">
+					 	<div class="panel-body">
+							Recepción:<br/>
+							21/11  9:15 AM
+						</div>
 					</div>
-				</div>
-				<div class="col-md-3 col-xs-3">
-				 	<div class="panel-body box_progress">
-				 		<div class="barra">
-					 		<div class="progress">
-								<div class="progress-bar progress-bar-warning" style="width: 100%">
+					<div class="col-md-3 col-xs-3">
+					 	<div class="panel-body box_progress">
+					 		<div class="barra">
+						 		<div class="progress">
+									<div class="progress-bar progress-bar-warning" style="width: 100%">
+									</div>
 								</div>
+								<span class="sr-only">100%</span>
 							</div>
-							<span class="sr-only">100%</span>
-						</div>
-						<div class="barra">
-							<div class="progress">
-							  <div class="progress-bar progress-bar-success" style="width: 50%">
-							  </div>
+							<div class="barra">
+								<div class="progress">
+								  <div class="progress-bar progress-bar-success" style="width: 50%">
+								  </div>
+								</div>
+								<span class="sr-only">50%</span>
 							</div>
-							<span class="sr-only">50%</span>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-3 col-xs-3">
-				 	<div class="panel-body">
-						Prom. entrega:<br/>
-						21/11  9:15 AM
+					<div class="col-md-3 col-xs-3">
+					 	<div class="panel-body">
+							Prom. entrega:<br/>
+							21/11  9:15 AM
+						</div>
 					</div>
-				</div>
-				<div class="col-md-12 col-xs-12">
-				 	<div class="panel-body">
-						OT : <code>345673</code></br>
-						Estado Actual : <code>Detenido</code> ( En espera herramientas )
+					<div class="col-md-12 col-xs-12">
+					 	<div class="panel-body">
+							OT : <code>345673</code></br>
+							Estado Actual : <code>Detenido</code> ( En espera herramientas )
+						</div>
 					</div>
-				</div>
-				<div class="col-md-12 col-xs-12">
-					<div class="panel-hading">
-						<h1>Diagnóstico</h1>
+					<div class="col-md-12 col-xs-12">
+						<div class="panel-hading">
+							<h1>Diagnóstico</h1>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-6 col-xs-6">
-					<div class="panel-body">
-				 		Sistema : Tren delantero</br>
-						Conjunto : Suspensión </br>
-						Parte : Amortiguador derecho
+					<div class="col-md-6 col-xs-6">
+						<div class="panel-body">
+					 		Sistema : Tren delantero</br>
+							Conjunto : Suspensión </br>
+							Parte : Amortiguador derecho
+						</div>
 					</div>
-				</div>
-				<div class="col-md-6 col-xs-6">
-					<div class="panel-body">
-					 	Falla: Pérdida total de líquido</br>
-						Causa: Falla sellos</br>
-						Solución : Reemplazo
+					<div class="col-md-6 col-xs-6">
+						<div class="panel-body">
+						 	Falla: Pérdida total de líquido</br>
+							Causa: Falla sellos</br>
+							Solución : Reemplazo
+						</div>
 					</div>
-				</div>
-				<div class="col-md-12 col-xs-12">
-					<div class="panel-hading">
-						<h1>Observaciones</h1>
+					<div class="col-md-12 col-xs-12">
+						<div class="panel-hading">
+							<h1>Observaciones</h1>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-12 col-xs-12">
-					<div class="panel-body">
-				 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					<div class="col-md-12 col-xs-12">
+						<div class="panel-body">
+					 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						</div>
 					</div>
+					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
 			</div>
-			<div class="clear"></div>
 		</div>
 	</div>
 
 	<div id="detalle_enespera" style="display:none;">
-		<div class="panel-heading">En Espera
-		<button type="button" class="btn btn-default pull-right" onclick="detalle_enespera('detalle_enespera')">
+		<div class="panel panel-default no-border no-bg">
+			<div class="panel-heading panel-head no-border">En Espera
+			<button type="button" class="btn btn-default pull-right" onclick="detalle_enespera('detalle_enespera')">
 				<span class="glyphicon glyphicon-arrow-left"></span>
 			</button>
 			<div class="clear"></div>
-		</div>
-		<div class="panel-body col-xs-12 col-sm-12 detalle_enespera">
-			<div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_uno" class="collapsed">
-                        	En espera diágnóstico
-                        	<span class="badge">2</span>
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse_uno" class="panel-collapse collapse">
-                	<div class="clear"></div>
-	                <div class="panel panel-default boton mantencion">
-						<div class="col-md-1 col-xs-1">
-							<div class="panel-body">
-							 	<div class="estado"></div>
-							</div>
-						</div>
-						<div class="col-md-1 col-xs-1">
-							<div class="panel-body">
-							 	<div class="tipo"></div>
-							</div>
-						</div>
-						<div class="col-md-4 col-xs-4">
-						 	<div class="panel-body">
-								Constructora Excon<br/>
-								FD TR 47 – NI : 142
-							</div>
-						</div>
-						<div class="col-md-2 col-xs-2">
-						 	<div class="panel-body">
-								Recepción: (7)<br/>
-								21/11  9:15 AM
-							</div>
-						</div>
-						<div class="col-md-2 col-xs-2">
-						 	<div class="panel-body box_progress">
-						 		<div class="barra">
-							 		<div class="progress">
-										<div class="progress-bar progress-bar-warning" style="width: 100%">
+			</div>
+			<div class="panel panel-default no-border no-bg">
+				<div class="panel-body">
+					<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_uno" class="collapsed">
+		                        	En espera diágnóstico
+		                        	<span class="badge">2</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel panel-default panel-collapse collapse no-border no-bg">
+					  		<div class="panel-body">
+				                <div class="panel panel-default mantencion">
+									<div class="col-md-1 col-xs-1">
+										<div class="panel-body">
+										 	<div class="estado"></div>
 										</div>
 									</div>
-									<span class="sr-only">100%</span>
-								</div>
-								<div class="barra">
-									<div class="progress">
-									  <div class="progress-bar progress-bar-success" style="width: 50%">
-									  </div>
-									</div>
-									<span class="sr-only">50%</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-2 col-xs-2">
-						 	<div class="panel-body">
-								Prom. entrega:<br/>
-								Por definir
-							</div>
-						</div>
-						<div class="clear"></div>
-					</div>
-					<div class="panel panel-default boton reparacion">
-						<div class="col-md-1 col-xs-1">
-							<div class="panel-body">
-							 	<div class="estado"></div>
-							</div>
-						</div>
-						<div class="col-md-1 col-xs-1">
-							<div class="panel-body">
-							 	<div class="tipo"></div>
-							</div>
-						</div>
-						<div class="col-md-4 col-xs-4">
-						 	<div class="panel-body">
-								Constructora Excon<br/>
-								FD TR 47 – NI : 142
-							</div>
-						</div>
-						<div class="col-md-2 col-xs-2">
-						 	<div class="panel-body">
-								Recepción: (7)<br/>
-								21/11  9:15 AM
-							</div>
-						</div>
-						<div class="col-md-2 col-xs-2">
-						 	<div class="panel-body box_progress">
-						 		<div class="barra">
-							 		<div class="progress">
-										<div class="progress-bar progress-bar-warning" style="width: 100%">
+									<div class="col-md-1 col-xs-1">
+										<div class="panel-body">
+										 	<div class="tipo"></div>
 										</div>
 									</div>
-									<span class="sr-only">100%</span>
-								</div>
-								<div class="barra">
-									<div class="progress">
-									  <div class="progress-bar progress-bar-success" style="width: 50%">
-									  </div>
-									</div>
-									<span class="sr-only">50%</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-2 col-xs-2">
-						 	<div class="panel-body">
-								Prom. entrega:<br/>
-								Por definir
-							</div>
-						</div>
-						<div class="clear"></div>
-					</div>
-					<div class="panel panel-default boton reparacion">
-						<div class="col-md-1 col-xs-1">
-							<div class="panel-body">
-							 	<div class="estado"></div>
-							</div>
-						</div>
-						<div class="col-md-1 col-xs-1">
-							<div class="panel-body">
-							 	<div class="tipo maquinaria"></div>
-							</div>
-						</div>
-						<div class="col-md-4 col-xs-4">
-						 	<div class="panel-body">
-								Constructora Excon<br/>
-								FD TR 47 – NI : 142
-							</div>
-						</div>
-						<div class="col-md-2 col-xs-2">
-						 	<div class="panel-body">
-								Recepción: (7)<br/>
-								21/11  9:15 AM
-							</div>
-						</div>
-						<div class="col-md-2 col-xs-2">
-						 	<div class="panel-body box_progress">
-						 		<div class="barra">
-							 		<div class="progress">
-										<div class="progress-bar progress-bar-warning" style="width: 100%">
+									<div class="col-md-4 col-xs-4">
+									 	<div class="panel-body">
+											Constructora Excon<br/>
+											FD TR 47 – NI : 142
 										</div>
 									</div>
-									<span class="sr-only">100%</span>
-								</div>
-								<div class="barra">
-									<div class="progress">
-									  <div class="progress-bar progress-bar-success" style="width: 50%">
-									  </div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Recepción: (7)<br/>
+											21/11  9:15 AM
+										</div>
 									</div>
-									<span class="sr-only">50%</span>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body box_progress">
+									 		<div class="barra">
+										 		<div class="progress">
+													<div class="progress-bar progress-bar-warning" style="width: 100%">
+													</div>
+												</div>
+												<span class="sr-only">100%</span>
+											</div>
+											<div class="barra">
+												<div class="progress">
+												  <div class="progress-bar progress-bar-success" style="width: 50%">
+												  </div>
+												</div>
+												<span class="sr-only">50%</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Prom. entrega:<br/>
+											Por definir
+										</div>
+									</div>
+									<div class="clear"></div>
 								</div>
-							</div>
-						</div>
-						<div class="col-md-2 col-xs-2">
-						 	<div class="panel-body">
-								Prom. entrega:<br/>
-								Por definir
-							</div>
-						</div>
-						<div class="clear"></div>
-					</div>
-            	</div>
-        	</div>
-        	<div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_uno" class="collapsed">
-                        	En espera Repuestos
-                        	<span class="badge">4</span>
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse_uno" class="panel-collapse collapse">
-	               
-            	</div>
-        	</div>
-        	<div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
-                        	En espera Herramientas
-                        	<span class="badge">0</span>
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse_uno" class="panel-collapse collapse">
-	               
-            	</div>
-        	</div>
-        	<div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
-                        	En espera Soporte
-                        	<span class="badge">1</span>
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse_uno" class="panel-collapse collapse">
-	               
-            	</div>
-        	</div>
-        	<div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
-                        	En espera Técnico
-                        	<span class="badge">3</span>
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse_uno" class="panel-collapse collapse">
-	               
-            	</div>
-        	</div>
-        	<div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
-                        	En espera Nave
-                        	<span class="badge">2</span>
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse_uno" class="panel-collapse collapse">
-	               
-            	</div>
-        	</div>
-        	<div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
-                        	En espera Serv. 3º o DyP
-                        	<span class="badge">1</span>
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse_uno" class="panel-collapse collapse">
-	               
-            	</div>
-        	</div>
-        	<div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
-                        	En espera QA
-                        	<span class="badge">1</span>
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse_uno" class="panel-collapse collapse">
-	               
-            	</div>
-        	</div>
+								<div class="panel panel-default reparacion">
+									<div class="col-md-1 col-xs-1">
+										<div class="panel-body">
+										 	<div class="estado"></div>
+										</div>
+									</div>
+									<div class="col-md-1 col-xs-1">
+										<div class="panel-body">
+										 	<div class="tipo"></div>
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-4">
+									 	<div class="panel-body">
+											Constructora Excon<br/>
+											FD TR 47 – NI : 142
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Recepción: (7)<br/>
+											21/11  9:15 AM
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body box_progress">
+									 		<div class="barra">
+										 		<div class="progress">
+													<div class="progress-bar progress-bar-warning" style="width: 100%">
+													</div>
+												</div>
+												<span class="sr-only">100%</span>
+											</div>
+											<div class="barra">
+												<div class="progress">
+												  <div class="progress-bar progress-bar-success" style="width: 50%">
+												  </div>
+												</div>
+												<span class="sr-only">50%</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Prom. entrega:<br/>
+											Por definir
+										</div>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<div class="panel panel-default reparacion">
+									<div class="col-md-1 col-xs-1">
+										<div class="panel-body">
+										 	<div class="estado"></div>
+										</div>
+									</div>
+									<div class="col-md-1 col-xs-1">
+										<div class="panel-body">
+										 	<div class="tipo maquinaria"></div>
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-4">
+									 	<div class="panel-body">
+											Constructora Excon<br/>
+											FD TR 47 – NI : 142
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Recepción: (7)<br/>
+											21/11  9:15 AM
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body box_progress">
+									 		<div class="barra">
+										 		<div class="progress">
+													<div class="progress-bar progress-bar-warning" style="width: 100%">
+													</div>
+												</div>
+												<span class="sr-only">100%</span>
+											</div>
+											<div class="barra">
+												<div class="progress">
+												  <div class="progress-bar progress-bar-success" style="width: 50%">
+												  </div>
+												</div>
+												<span class="sr-only">50%</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Prom. entrega:<br/>
+											Por definir
+										</div>
+									</div>
+									<div class="clear"></div>
+								</div>
+			            	</div>
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_dos" class="collapsed">
+		                        	En espera Repuestos
+		                        	<span class="badge">4</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_dos" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
+		                        	En espera Herramientas
+		                        	<span class="badge">0</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
+		                        	En espera Soporte
+		                        	<span class="badge">1</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
+		                        	En espera Técnico
+		                        	<span class="badge">3</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
+		                        	En espera Nave
+		                        	<span class="badge">2</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
+		                        	En espera Serv. 3º o DyP
+		                        	<span class="badge">1</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
+		                        	En espera QA
+		                        	<span class="badge">1</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+				</div>
 
-			<div class="clear"></div>
+				<div class="clear"></div>
+			</div>
 		</div>
 	</div>
 	
@@ -753,8 +836,9 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- METISMENU SCRIPTS -->
     <script src="assets/js/jquery.metisMenu.js"></script>
-      <!-- CUSTOM SCRIPTS -->
+      <!-- CUSTOM SCRIPTS 
     <script src="assets/js/custom.js"></script>
+    -->
 
 </body>
 
