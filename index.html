@@ -105,7 +105,7 @@
 </head>
 <body>
 		
-    <div id="login" class="ingreso" style="display:none;">
+    <div id="login" class="ingreso" style="display:block;">
 		<div class="box_ingreso">
 			<select class="form-control">
 			  <option>Norman Riquelme</option>
@@ -122,7 +122,7 @@
 		<div class="clear"></div>
 	</div>
         
-    <div id="contenido_a_mostrar" class="flujo" style="display:block;">
+    <div id="contenido_a_mostrar" class="flujo" style="display:none;">
 		<div class="panel panel-default">
 			<div class="panel-body col-xs-12 col-sm-12 panel_categorias">
 			    <div class="row">
@@ -321,21 +321,21 @@
 						 	<div class="estado"></div>
 						</div>
 					</div>
-					<div class="col-md-1 col-xs-1">
+					<div class="col-md-1 col-xs-2">
 						<div class="panel-body">
 						 	<div class="tipo"></div>
 						</div>
 					</div>
-					<div class="col-md-4 col-xs-4">
+					<div class="col-md-4 col-xs-3">
 					 	<div class="panel-body">
-							Constructora Excon<br/>
+							I. Municipalidad de Bulnes<br/>
 							FD TR 47 – NI : 142
 						</div>
 					</div>
 					<div class="col-md-2 col-xs-2">
 					 	<div class="panel-body">
 							Recepción: (7)<br/>
-							21/11  9:15 AM
+							28/12  9:15 AM
 						</div>
 					</div>
 					<div class="col-md-2 col-xs-2">
@@ -370,12 +370,12 @@
 						 	<div class="estado"></div>
 						</div>
 					</div>
-					<div class="col-md-1 col-xs-1">
+					<div class="col-md-1 col-xs-2">
 						<div class="panel-body">
 						 	<div class="tipo"></div>
 						</div>
 					</div>
-					<div class="col-md-4 col-xs-4">
+					<div class="col-md-4 col-xs-3">
 					 	<div class="panel-body">
 							Constructora Excon<br/>
 							FD TR 47 – NI : 142
@@ -384,7 +384,7 @@
 					<div class="col-md-2 col-xs-2">
 					 	<div class="panel-body">
 							Recepción: (7)<br/>
-							21/11  9:15 AM
+							17/12  9:15 AM
 						</div>
 					</div>
 					<div class="col-md-2 col-xs-2">
@@ -419,14 +419,14 @@
 						 	<div class="estado"></div>
 						</div>
 					</div>
-					<div class="col-md-1 col-xs-1">
+					<div class="col-md-1 col-xs-2">
 						<div class="panel-body">
 						 	<div class="tipo maquinaria"></div>
 						</div>
 					</div>
-					<div class="col-md-4 col-xs-4">
+					<div class="col-md-4 col-xs-3">
 					 	<div class="panel-body">
-							Constructora Excon<br/>
+							Constructora Mayor LTDA<br/>
 							FD TR 47 – NI : 142
 						</div>
 					</div>
@@ -471,92 +471,185 @@
 	<div id="detalle_camion" style="display:none;">
 		<div class="panel panel-default no-border no-bg">
 			<div class="panel-heading panel-head no-border">
+				I. Municipalidad de Bulnes - FD TR 47 – NI : 142
 				<button type="button" class="btn btn-default pull-right" onclick="detalle_camion('detalle_camion')"><span class="glyphicon glyphicon-arrow-left"></span></button>
 				<div class="clear"></div>
 			</div>
-			<div class="panel panel-default no-border no-bg">
-				<div class="panel panel-default">
-					<div class="col-md-3 col-xs-3">
-					 	<div class="panel-body">
-							Constructora Excon<br/>
-							FD TR 47 – NI : 142<br/>
-							KM : 9.999<br/>
-							Hr : --
-						</div>
-					</div>
-					<div class="col-md-3 col-xs-3">
-					 	<div class="panel-body">
-							Recepción:<br/>
-							21/11  9:15 AM
-						</div>
-					</div>
-					<div class="col-md-3 col-xs-3">
-					 	<div class="panel-body box_progress">
-					 		<div class="barra">
-						 		<div class="progress">
-									<div class="progress-bar progress-bar-warning" style="width: 100%">
+
+		
+
+			<div class="panel-body bg">
+		  		<div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseCliente">
+		                    	Datos Generales
+		                    </a>
+		                </h4>
+		            </div>
+		            <div id="collapseCliente" class="panel-collapse collapse in">
+		                <div class="panel-body">
+						  	<div class="row">
+							<div class="col-md-12 datos_standar">
+								<div class="row">
+									<div class="col-md-5 col-xs-6">
+										<table>
+											<tr>
+												<td>Cliente</td>
+												<td>: <strong>I. Municipalidad de Bulnes</strong></td>
+											</tr>
+											<tr>
+												<td>Parente / N°</td>
+												<td>: <strong>FD TR 47 – NI : 142</strong></td>
+											</tr>
+											<tr>
+												<td>KM</td>
+												<td>: <strong>9.999</strong></td>
+											</tr>
+											<tr>
+												<td>HR</td>
+												<td>: <strong>---</strong></td>
+											</tr>
+											<tr>
+												<td>Recepción</td>
+												<td>: <strong>28/12 9:15 AM</strong></td>
+											</tr>
+											<tr>
+												<td>OT </td>
+												<td>: <strong>345673</strong></td>
+											</tr>
+											<tr>
+												<td>Estado Actual</td>
+												<td>: <strong>Detenido ( En espera herramientas ) </strong></td>
+											</tr>
+										</table>
+									</div>
+									<div class="col-md-5 col-xs-6">
+										<table width="100%">
+											<tr>
+												<td>
+													<div class="barra">
+												 		<div class="progress">
+															<div class="progress-bar progress-bar-warning" style="width: 100%">
+															</div>
+														</div>
+														<span class="sr-only">100%</span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="barra">
+														<div class="progress">
+														  <div class="progress-bar progress-bar-success" style="width: 50%">
+														  </div>
+														</div>
+														<span class="sr-only">50%</span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Prom. entrega: 21/11 9:15 AM
+												</td>
+											</tr>
+										</table>
 									</div>
 								</div>
-								<span class="sr-only">100%</span>
 							</div>
-							<div class="barra">
-								<div class="progress">
-								  <div class="progress-bar progress-bar-success" style="width: 50%">
-								  </div>
+							</div>
+						 </div>
+		            </div>
+		        </div>
+
+				<!-- DIAGNOSTICO -->
+				<div class="panel panel-default diagnostico">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse_01" aria-expanded="false" aria-controls="collapseThree">
+					          Diagnóstico
+					        </a>
+					    </h4>
+					</div>
+					<div id="collapse_01" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+						<div class="panel-body">
+
+								<div class="head">
+									<div class="row">
+										<div class="col-md-12 col-xs-12 box_destacar">
+											<div class="col-md-4 col-xs-4 l">
+												  Sistema : <strong>Tren delantero</strong>
+											</div>
+											<div class="col-md-4 col-xs-4 ">
+												  Conjunto : <strong>Suspensión </strong>
+											</div>
+											<div class="col-md-4 col-xs-4 r">
+												  Parte : <strong>Amortiguador derecho</strong>
+											</div>
+						            	</div>
+						            	<div class="col-md-12 col-xs-12 destacar">
+											<div class="col-md-4 col-xs-4 l">
+												  <label for="">Falla</label>
+												  <div class="texto_ingresado">
+													Pérdida total de líquido
+												</div>
+											</div>
+											<div class="col-md-4 col-xs-4">
+												  <label for="">Causa</label>
+												  <div class="texto_ingresado">
+													  Falla sellos
+												</div>
+											</div>
+											<div class="col-md-4 col-xs-4 r">
+												  <label for="">Solución</label>
+												  <div class="texto_ingresado">
+													  Reemplazo
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-xs-12">
+											<label for="">Comentario :</label>
+											<div class="texto_ingresado">
+												Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+											</div>
+										</div>
+										<div class="clear"></div>
+									</div>
 								</div>
-								<span class="sr-only">50%</span>
-							</div>
-						</div>
+							
+						  </div>
 					</div>
-					<div class="col-md-3 col-xs-3">
-					 	<div class="panel-body">
-							Prom. entrega:<br/>
-							21/11  9:15 AM
-						</div>
-					</div>
-					<div class="col-md-12 col-xs-12">
-					 	<div class="panel-body">
-							OT : <code>345673</code></br>
-							Estado Actual : <code>Detenido</code> ( En espera herramientas )
-						</div>
-					</div>
-					<div class="col-md-12 col-xs-12">
-						<div class="panel-hading">
-							<h1>Diagnóstico</h1>
-						</div>
-					</div>
-					<div class="col-md-6 col-xs-6">
-						<div class="panel-body">
-					 		Sistema : Tren delantero</br>
-							Conjunto : Suspensión </br>
-							Parte : Amortiguador derecho
-						</div>
-					</div>
-					<div class="col-md-6 col-xs-6">
-						<div class="panel-body">
-						 	Falla: Pérdida total de líquido</br>
-							Causa: Falla sellos</br>
-							Solución : Reemplazo
-						</div>
-					</div>
-					<div class="col-md-12 col-xs-12">
-						<div class="panel-hading">
-							<h1>Observaciones</h1>
-						</div>
-					</div>
-					<div class="col-md-12 col-xs-12">
-						<div class="panel-body">
-					 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-						</div>
-					</div>
-					<div class="clear"></div>
 				</div>
-				<div class="clear"></div>
-			</div>
+
+				<div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseObservaciones">
+		                    	Observaciones
+		                    </a>
+		                </h4>
+		            </div>
+		            <div id="collapseObservaciones" class="panel-collapse collapse in">
+		                <div class="panel-body">
+					 	<div class="col-md-12 col-xs-12">
+					 		<div class="row">
+						 		<div class="texto_ingresado">
+						 			<textarea name="" id="" cols="30" rows="10" place>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+						 			</textarea>
+						 		</div>
+					 		</div>
+						</div>
+					</div>
+		            </div>
+		        </div>
+
+            </div>
+			<div class="clear"></div>
+
+			
 		</div>
 	</div>
 
-	<div id="detalle_enespera" style="display:block;">
+	<div id="detalle_enespera" style="display:none;">
 		<div class="panel panel-default no-border no-bg">
 			<div class="panel-heading panel-head no-border">En Espera
 			<button type="button" class="btn btn-default pull-right" onclick="detalle_enespera('detalle_enespera')">
@@ -575,7 +668,7 @@
 		                        </a>
 		                    </h4>
 		                </div>
-		                <div id="collapse_uno" class="panel panel-default panel-collapse collapse in no-border no-bg">
+		                <div id="collapse_uno" class="panel panel-default panel-collapse collapse no-border no-bg">
 					  		<div class="panel-body">
 				                <div class="panel panel-default mantencion">
 									<div class="col-md-1 col-xs-1">
@@ -695,7 +788,7 @@
 									<div class="col-md-2 col-xs-2">
 									 	<div class="panel-body">
 											Recepción: (7)<br/>
-											21/11  9:15 AM
+											12/12  9:15 AM
 										</div>
 									</div>
 									<div class="col-md-2 col-xs-2">
