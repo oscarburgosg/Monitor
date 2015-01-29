@@ -485,7 +485,12 @@ html{
 
 @media (max-width: 640px) {
     html{
+border-left:red solid 10px;
+    }
 
+    .box_destacar strong{
+        display: block;
+    font-size: 15px;
     }
 
     .content_connector .barra{
@@ -495,7 +500,7 @@ html{
 
 @media (max-width: 568px) {
     html{
-
+border-left:orange solid 10px;
     }
 
     .content_connector .barra{
@@ -504,13 +509,13 @@ html{
 }
 @media (max-width: 480px) {
 html{
-
+border-left:green solid 10px;
 }
 
 }
 @media (max-width: 450px) {
 html{
-
+    border-left:red solid 10px;
 }
 
 .content_connector .barra{
