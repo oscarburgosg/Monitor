@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+		<title>Salfa MONITOR</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- BOOTSTRAP STYLES-->
+		<link href="assets/css/bootstrap.css" rel="stylesheet" />
+		<!-- FONTAWESOME STYLES-->
+		<link href="assets/css/font-awesome.css" rel="stylesheet" />
+		<!-- CUSTOM STYLES-->
+		<link href="assets/css/custom.css" rel="stylesheet" />
+
+		<!-- GOOGLE FONTS-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+
+		<!-- TABLE STYLES-->
+    	<link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+
+    	<!-- PANELES -->
+		<link rel="stylesheet" type="text/css" href="css/paneles.css">
+		<link rel="stylesheet" type="text/css" href="css/comun.css">
+
+		<script language="JavaScript">
+
+			function login(id){
+			
+			var login = $("#login");
+			var contenido = $("#contenido_a_mostrar");
+			
+			login.css("display",(login.css("display")=="none"?"block":"none"));
+			contenido.css("display",(contenido.css("display")=="none"?"block":"none"));
+			}
+
+			function ver_detalle(id){
+			
+			var boton_ver = $("#boton_ver");
+			var detalle = $("#detalle_camiones");
+			var boton_cerrar = $("#boton_cerrar");
+			var contenido = $("#contenido_a_mostrar");
+			
+			boton_ver.css("display",(boton_ver.css("display")=="none"?"block":"block"));
+			detalle.css("display",(detalle.css("display")=="none"?"block":"none"));
+			boton_cerrar.css("display",(boton_cerrar.css("display")=="none"?"block":"block"));
+			contenido.css("display",(contenido.css("display")=="none"?"block":"none"));
+			}
+
+			function cerrar_detalle(id){
+			
+			var boton_cerrar = $("#boton_cerrar");
+			var detalle = $("#detalle_camiones");
+			var contenido = $("#contenido_a_mostrar");
+			
+			boton_cerrar.css("display",(boton_cerrar.css("display")=="none"?"block":"none"));
+			detalle.css("display",(detalle.css("display")=="none"?"block":"none"));
+			contenido.css("display",(contenido.css("display")=="none"?"block":"none"));
+			}
+
+			function detalle_camion(id){
+			
+			var boton_cerrar = $("#boton_cerrar");
+			var detalle = $("#detalle_camiones");
+			var detalle_camion = $("#detalle_camion");
+			
+			boton_cerrar.css("display",(boton_cerrar.css("display")=="none"?"block":"none"));
+			detalle.css("display",(detalle.css("display")=="none"?"block":"none"));
+			detalle_camion.css("display",(detalle_camion.css("display")=="none"?"block":"none"));
+			}
+
+			function cerrar_detalle_camion(id){
+			
+			var boton_cerrar = $("#boton_cerrar");
+			var detalle = $("#detalle_camiones");
+			var detalle_camion = $("#detalle_camion");
+			
+			boton_cerrar.css("display",(boton_cerrar.css("display")=="none"?"block":"none"));
+			detalle.css("display",(detalle.css("display")=="none"?"block":"none"));
+			detalle_camion.css("display",(detalle_camion.css("display")=="none"?"block":"none"));
+			}
+
+			function detalle_enespera(id){
+			
+			var detalle_enespera = $("#detalle_enespera");
+			var contenido = $("#contenido_a_mostrar");
+			
+			contenido.css("display",(contenido.css("display")=="none"?"block":"none"));
+
+			detalle_enespera.css("display",(detalle_enespera.css("display")=="none"?"block":"none"));}
+
+			function cerrar_detalle_enespera(id){
+			
+			var boton_cerrar = $("#boton_cerrar");
+			var detalle = $("#detalle_camiones");
+			var detalle_camion = $("#detalle_camion");
+			
+			boton_cerrar.css("display",(boton_cerrar.css("display")=="none"?"block":"none"));
+			detalle_enespera.css("display",(detalle.css("display")=="none"?"block":"none"));
+			detalle_enespera.css("display",(detalle_camion.css("display")=="none"?"block":"none"));
+			}
+			
+		</script>
+		
+</head>
+<body>
+		
+    <div id="login" class="ingreso" style="display:block;">
+		<div class="box_ingreso">
+			<select class="form-control">
+			  <option>Norman Riquelme</option>
+			  <option>Oscar Burgos</option>
+			  <option>Jose Caro</option>
+			</select>
+		</div>
+		<div class="box_ingreso">
+			<input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
+		</div>
+		<div class="box_ingreso">
+			<button type="button" class="btn btn-default" onclick="login('contenido_a_mostrar')">INGRESAR</button>
+		</div>
+		<div class="clear"></div>
+	</div>
+        
+    <div id="contenido_a_mostrar" class="flujo" style="display:none;">
+		<div class="panel panel-default">
+			<div class="panel-body col-xs-12 col-sm-12 panel_categorias">
+			    <div class="row">
+	                <div class="col-md-4 col-xs-4">
+						<div class="panel panel-default">
+						  <div class="panel-body">
+						    Ingresados
+						    <span class="badge">15</span>
+						  </div>
+						</div>
+						<div class="connector uno">
+							<div class="down"></div>
+						</div>
+						<div class="clear"></div>
+						<div class="panel panel-default">
+						  <div class="panel-body">
+						    Recepcionados
+						    <span class="badge">10</span>
+						  </div>
+						</div>
+						<div class="connector dos">
+							<div class="down"></div>
+						</div>
+						<div class="clear"></div>
+						<div class="panel panel-default">
+						  <div class="panel-body">
+						    Preevaluados
+						    <span class="badge">7</span>
+						  </div>
+						</div>
+						<div class="connector uno">
+							<div class="down"></div>
+						</div>
+						<div class="content_connector dos">
+							<div class="connector up">
+								<div class="barra">
+									<div class="barra_up">
+										<div class="right"></div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="col-md-4 col-xs-4 content_connector">
+						<div class="connector up">
+							<div class="barra">
+								<div class="barra_up"></div>
+								<div class="barra">
+									<div class="right"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+	                <div class="col-md-4 col-xs-4">
+						<div class="panel panel-default">
+						  <div class="panel-body">
+						    Por presupuestar
+						    <span class="badge">2</span>
+						  </div>
+						</div>
+						<div class="connector uno">
+							<div class="down"></div>
+						</div>
+						<div class="panel panel-default">
+						  <div class="panel-body">
+						    En espera Cliente
+						    <span class="badge">9</span>
+						  </div>
+						</div>
+						<div class="connector uno">
+							<div class="down"></div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-body">
+							    Aprobados por cliente
+							    <span class="badge">5</span>
+						    </div>
+						  	<div class="content_connector dos tres">
+								<div class="connector up">
+									<div class="barra">
+										<div class="barra_up">
+											<div class="left"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="connector uno">
+							<div class="down"></div>
+						</div>
+					</div>
+	            </div>
+
+	            <div class="row">
+	                <div class="col-md-4 col-xs-4">
+	                	<div class="panel panel-default">
+						    <div id="boton_ver" class="panel-body boton" onclick="ver_detalle('detalle_camiones')">
+						  		En Diagnóstico
+						    	<span class="badge">3</span>
+						    </div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-4">
+						<div class="panel panel-success en_espera">
+						  <div id="boton_enespera" class="panel-body boton" onclick="detalle_enespera('detalle_enespera')">
+						    En espera
+						    <span class="badge">15</span>
+						  </div>
+						</div>
+					</div>
+	                <div class="col-md-4 col-xs-4 ">
+						<div class="panel panel-default">
+						  <div class="panel-body">
+						    En reparación
+						    <span class="badge">9</span>
+							</div>
+						</div>
+						<div class="connector uno">
+							<div class="down"></div>
+						</div>
+						<div class="panel panel-default">
+						  <div class="panel-body">
+						    En QA
+						    <span class="badge">7</span>
+							</div>
+						</div>
+						<div class="connector uno">
+							<div class="down"></div>
+						</div>
+					</div>
+	            </div>
+
+	            <div class="row">
+	                <div class="col-md-4 col-xs-4 content_connector">
+						<div class="panel panel-default">
+						  <div class="panel-body">
+						  	<div class="connector down">
+								<div class="down"></div>
+								<div class="barra">
+									<div class="barra_down">
+										
+									</div>
+									<div class="barra_small"></div>
+								</div>
+							</div>
+						    Por Retirar
+						    <span class="badge">3</span>
+						  </div>
+						</div>
+						<div class="connector left">
+							<div class="left"></div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-4 content_connector">
+						<div class="panel panel-default">
+						  <div class="panel-body">
+						  	<div class="connector down">
+								<div class="down"></div>
+							</div>
+						    Por Regularizar
+						    <span class="badge">3</span>
+						  </div>
+						</div>
+					</div>
+	                <div class="col-md-4 col-xs-4">
+						<div class="panel panel-default">
+						  <div class="panel-body">
+						    OT en cierre
+						    <span class="badge">9</span>
+							</div>
+						</div>
+					</div>
+	            </div>
+				<div class="clear"></div>
+            </div>
+        </div>
+		 <div class="clear"></div>
+	</div>
+
+	<div id="detalle_camiones" style="display:none;">
+		<div class="panel panel-default no-border no-bg">
+			<div class="panel-heading panel-head no-border">
+				En Diagnóstico
+				<button type="button" class="btn btn-default pull-right" onclick="ver_detalle('detalle_camiones')">
+					<span class="glyphicon glyphicon-arrow-left"></span>
+				</button>
+				<div class="clear"></div>
+			</div>
+			<div class="panel panel-default no-border no-bg">
+				<div class="panel panel-default boton mantencion" onclick="detalle_camion('detalle_camion')">
+					<div class="col-md-1 col-xs-1">
+						<div class="panel-body">
+						 	<div class="estado"></div>
+						</div>
+					</div>
+					<div class="col-md-1 col-xs-2">
+						<div class="panel-body">
+						 	<div class="tipo"></div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-3">
+					 	<div class="panel-body">
+							I. Municipalidad de Bulnes<br/>
+							FD TR 47 – NI : 142
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body">
+							Recepción: (7)<br/>
+							28/12  9:15 AM
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body box_progress">
+					 		<div class="barra">
+						 		<div class="progress">
+									<div class="progress-bar progress-bar-warning" style="width: 100%">
+									</div>
+								</div>
+								<span class="sr-only">100%</span>
+							</div>
+							<div class="barra">
+								<div class="progress">
+								  <div class="progress-bar progress-bar-success" style="width: 50%">
+								  </div>
+								</div>
+								<span class="sr-only">50%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body">
+							Prom. entrega:<br/>
+							Por definir
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="panel panel-default boton reparacion" onclick="detalle_camion('detalle_camion')">
+					<div class="col-md-1 col-xs-1">
+						<div class="panel-body">
+						 	<div class="estado"></div>
+						</div>
+					</div>
+					<div class="col-md-1 col-xs-2">
+						<div class="panel-body">
+						 	<div class="tipo"></div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-3">
+					 	<div class="panel-body">
+							Constructora Excon<br/>
+							FD TR 47 – NI : 142
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body">
+							Recepción: (7)<br/>
+							17/12  9:15 AM
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body box_progress">
+					 		<div class="barra">
+						 		<div class="progress">
+									<div class="progress-bar progress-bar-warning" style="width: 100%">
+									</div>
+								</div>
+								<span class="sr-only">100%</span>
+							</div>
+							<div class="barra">
+								<div class="progress">
+								  <div class="progress-bar progress-bar-success" style="width: 50%">
+								  </div>
+								</div>
+								<span class="sr-only">50%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body">
+							Prom. entrega:<br/>
+							Por definir
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="panel panel-default boton reparacion" onclick="detalle_camion('detalle_camion')">
+					<div class="col-md-1 col-xs-1">
+						<div class="panel-body">
+						 	<div class="estado"></div>
+						</div>
+					</div>
+					<div class="col-md-1 col-xs-2">
+						<div class="panel-body">
+						 	<div class="tipo maquinaria"></div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-3">
+					 	<div class="panel-body">
+							Constructora Mayor LTDA<br/>
+							FD TR 47 – NI : 142
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body">
+							Recepción: (7)<br/>
+							21/11  9:15 AM
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body box_progress">
+					 		<div class="barra">
+						 		<div class="progress">
+									<div class="progress-bar progress-bar-warning" style="width: 100%">
+									</div>
+								</div>
+								<span class="sr-only">100%</span>
+							</div>
+							<div class="barra">
+								<div class="progress">
+								  <div class="progress-bar progress-bar-success" style="width: 50%">
+								  </div>
+								</div>
+								<span class="sr-only">50%</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-xs-2">
+					 	<div class="panel-body">
+							Prom. entrega:<br/>
+							Por definir
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	
+	</div>
+
+	<div id="detalle_camion" style="display:none;">
+		<div class="panel panel-default no-border no-bg">
+			<div class="panel-heading panel-head no-border">
+				I. Municipalidad de Bulnes - FD TR 47 – NI : 142
+				<button type="button" class="btn btn-default pull-right" onclick="detalle_camion('detalle_camion')"><span class="glyphicon glyphicon-arrow-left"></span></button>
+				<div class="clear"></div>
+			</div>
+
+		
+
+			<div class="panel-body bg">
+		  		<div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseCliente">
+		                    	Datos Generales
+		                    </a>
+		                </h4>
+		            </div>
+		            <div id="collapseCliente" class="panel-collapse collapse in">
+		                <div class="panel-body">
+						  	<div class="row">
+							<div class="col-md-12 datos_standar">
+								<div class="row">
+									<div class="col-md-5 col-xs-6">
+										<table>
+											<tr>
+												<td>Cliente</td>
+												<td>: <strong>I. Municipalidad de Bulnes</strong></td>
+											</tr>
+											<tr>
+												<td>Parente / N°</td>
+												<td>: <strong>FD TR 47 – NI : 142</strong></td>
+											</tr>
+											<tr>
+												<td>KM</td>
+												<td>: <strong>9.999</strong></td>
+											</tr>
+											<tr>
+												<td>HR</td>
+												<td>: <strong>---</strong></td>
+											</tr>
+											<tr>
+												<td>Recepción</td>
+												<td>: <strong>28/12 9:15 AM</strong></td>
+											</tr>
+											<tr>
+												<td>OT </td>
+												<td>: <strong>345673</strong></td>
+											</tr>
+											<tr>
+												<td>Estado Actual</td>
+												<td>: <strong>Detenido ( En espera herramientas ) </strong></td>
+											</tr>
+										</table>
+									</div>
+									<div class="col-md-5 col-xs-6">
+										<table width="100%">
+											<tr>
+												<td>
+													<div class="barra">
+												 		<div class="progress">
+															<div class="progress-bar progress-bar-warning" style="width: 100%">
+															</div>
+														</div>
+														<span class="sr-only">100%</span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="barra">
+														<div class="progress">
+														  <div class="progress-bar progress-bar-success" style="width: 50%">
+														  </div>
+														</div>
+														<span class="sr-only">50%</span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Prom. entrega: 21/11 9:15 AM
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+							</div>
+						 </div>
+		            </div>
+		        </div>
+
+				<!-- DIAGNOSTICO -->
+				<div class="panel panel-default diagnostico">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse_01" aria-expanded="false" aria-controls="collapseThree">
+					          Diagnóstico
+					        </a>
+					    </h4>
+					</div>
+					<div id="collapse_01" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+						<div class="panel-body">
+
+								<div class="head">
+									<div class="row">
+										<div class="col-md-12 col-xs-12 box_destacar">
+											<div class="col-md-4 col-xs-4 l">
+												  Sistema : <strong>Tren delantero</strong>
+											</div>
+											<div class="col-md-4 col-xs-4 ">
+												  Conjunto : <strong>Suspensión </strong>
+											</div>
+											<div class="col-md-4 col-xs-4 r">
+												  Parte : <strong>Amortiguador derecho</strong>
+											</div>
+						            	</div>
+						            	<div class="col-md-12 col-xs-12 destacar">
+											<div class="col-md-4 col-xs-4 l">
+												  <label for="">Falla</label>
+												  <div class="texto_ingresado">
+													Pérdida total de líquido
+												</div>
+											</div>
+											<div class="col-md-4 col-xs-4">
+												  <label for="">Causa</label>
+												  <div class="texto_ingresado">
+													  Falla sellos
+												</div>
+											</div>
+											<div class="col-md-4 col-xs-4 r">
+												  <label for="">Solución</label>
+												  <div class="texto_ingresado">
+													  Reemplazo
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-xs-12">
+											<label for="">Comentario :</label>
+											<div class="texto_ingresado">
+												Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+											</div>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							
+						  </div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseObservaciones">
+		                    	Observaciones
+		                    </a>
+		                </h4>
+		            </div>
+		            <div id="collapseObservaciones" class="panel-collapse collapse in">
+		                <div class="panel-body">
+					 	<div class="col-md-12 col-xs-12">
+					 		<div class="row">
+						 		<div class="texto_ingresado">
+						 			<textarea name="" id="" cols="30" rows="10" place>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+						 			</textarea>
+						 		</div>
+					 		</div>
+						</div>
+					</div>
+		            </div>
+		        </div>
+
+            </div>
+			<div class="clear"></div>
+
+			
+		</div>
+	</div>
+
+	<div id="detalle_enespera" style="display:none;">
+		<div class="panel panel-default no-border no-bg">
+			<div class="panel-heading panel-head no-border">En Espera
+			<button type="button" class="btn btn-default pull-right" onclick="detalle_enespera('detalle_enespera')">
+				<span class="glyphicon glyphicon-arrow-left"></span>
+			</button>
+			<div class="clear"></div>
+			</div>
+			<div class="panel panel-default no-border no-bg">
+				<div class="panel-body">
+					<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_uno" class="collapsed">
+		                        	En espera diágnóstico
+		                        	<span class="badge">3</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel panel-default panel-collapse collapse no-border no-bg">
+					  		<div class="panel-body">
+				                <div class="panel panel-default mantencion">
+									<div class="col-md-1 col-xs-1">
+										<div class="panel-body">
+										 	<div class="estado"></div>
+										</div>
+									</div>
+									<div class="col-md-1 col-xs-2">
+										<div class="panel-body">
+										 	<div class="tipo"></div>
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-3">
+									 	<div class="panel-body">
+											Antares Maquinarías<br/>
+											ZS 78 79 - NI: 421
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Recepción: (7)<br/>
+											31/12  9:15 AM
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body box_progress">
+									 		<div class="barra">
+										 		<div class="progress">
+													<div class="progress-bar progress-bar-success" style="width: 70%">
+													</div>
+												</div>
+												<span class="sr-only">70%</span>
+											</div>
+											<div class="barra">
+												<div class="progress">
+												  <div class="progress-bar progress-bar-success" style="width: 50%">
+												  </div>
+												</div>
+												<span class="sr-only">50%</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Prom. entrega:<br/>
+											Por definir
+										</div>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<div class="panel panel-default reparacion">
+									<div class="col-md-1 col-xs-1">
+										<div class="panel-body">
+										 	<div class="estado"></div>
+										</div>
+									</div>
+									<div class="col-md-1 col-xs-2">
+										<div class="panel-body">
+										 	<div class="tipo"></div>
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-3">
+									 	<div class="panel-body">
+											Asfalmix S.A.<br/>
+											ZS 78 79 - NI: 421
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Recepción: (7)<br/>
+											21/12  9:15 AM
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body box_progress">
+									 		<div class="barra">
+										 		<div class="progress">
+													<div class="progress-bar progress-bar-warning" style="width: 100%">
+													</div>
+												</div>
+												<span class="sr-only">100%</span>
+											</div>
+											<div class="barra">
+												<div class="progress">
+												  <div class="progress-bar progress-bar-success" style="width: 50%">
+												  </div>
+												</div>
+												<span class="sr-only">50%</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Prom. entrega:<br/>
+											Por definir
+										</div>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<div class="panel panel-default reparacion">
+									<div class="col-md-1 col-xs-1">
+										<div class="panel-body">
+										 	<div class="estado"></div>
+										</div>
+									</div>
+									<div class="col-md-1 col-xs-2">
+										<div class="panel-body">
+										 	<div class="tipo maquinaria"></div>
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-3">
+									 	<div class="panel-body">
+											Canteras Lonco S.A.<br/>
+											ZS 78 79 - NI: 421
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Recepción: (7)<br/>
+											12/12  9:15 AM
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body box_progress">
+									 		<div class="barra">
+										 		<div class="progress">
+													<div class="progress-bar progress-bar-warning" style="width: 100%">
+													</div>
+												</div>
+												<span class="sr-only">100%</span>
+											</div>
+											<div class="barra">
+												<div class="progress">
+												  <div class="progress-bar progress-bar-success" style="width: 50%">
+												  </div>
+												</div>
+												<span class="sr-only">50%</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Prom. entrega:<br/>
+											Por definir
+										</div>
+									</div>
+									<div class="clear"></div>
+								</div>
+			            	</div>
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_dos" class="collapsed">
+		                        	En espera Repuestos
+		                        	<span class="badge">4</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_dos" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
+		                        	En espera Herramientas
+		                        	<span class="badge">0</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
+		                        	En espera Soporte
+		                        	<span class="badge">1</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
+		                        	En espera Técnico
+		                        	<span class="badge">3</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
+		                        	En espera Nave
+		                        	<span class="badge">2</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
+		                        	En espera Serv. 3º o DyP
+		                        	<span class="badge">1</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+		        	<div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h4 class="panel-title">
+		                        <a data-toggle="collapse" data-parent="#accordion" href="" class="collapsed">
+		                        	En espera QA
+		                        	<span class="badge">1</span>
+		                        </a>
+		                    </h4>
+		                </div>
+		                <div id="collapse_uno" class="panel-collapse collapse">
+			               
+		            	</div>
+		        	</div>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/jquery-1.8.3.js"></script>
+	<script src="js/jquery-ui-1.9.2.custom.js"></script>
+	<script src="js/jquery_drag.js"></script>
+
+	<!-- JQUERY SCRIPTS 
+    	<script src="assets/js/jquery-1.10.2.js"></script>
+    -->
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+      <!-- CUSTOM SCRIPTS 
+    <script src="assets/js/custom.js"></script>
+    -->
+
+</body>
+
+</html>

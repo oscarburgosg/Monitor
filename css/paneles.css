@@ -1,0 +1,530 @@
+
+/********************************/
+.ingreso{
+	background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin: 25% auto 20px;
+    padding: 5px 10px;
+    width: 50%;
+}
+
+.ingreso .box_ingreso{
+	float:left;
+	width: 100%;
+	margin:5px 0;
+}
+
+.ingreso .box_ingreso label{
+	float:left;
+	width:40%;
+	margin:5px 0;
+}
+
+.ingreso .box_ingreso .btn{
+	float:right;
+}
+
+/******************************************************************/
+/*************************       FLECHAS    ***********************/
+.boxflecha{
+	margin: -4px 0 0 150px;
+    width: 20px;
+}
+
+.flecha { 
+	border-style: solid; 
+	border-width: 15px 10px 0; 
+	border-color: #F00 #00F #0F0 #FF0; 
+	width: 0; 
+}
+
+.palo{
+	width:3px;
+	height:20px;
+	background: #FFF;
+	margin: 0 auto;
+}
+
+.arriba {  border-color: #FFF #FFF #000 #FFF; }
+.derecha { border-color: #FFF #FFF #FFF #000; }
+.abajo { border-color: #FFF #2C2B36 #2C2B36 #2C2B36; }
+.izquierda { border-color: #FFF #000 #FFF #FFF; }
+
+.section_flechas{
+	position: relative;
+	height: auto;
+}
+
+.boxlineas{
+	position:relative;
+}
+
+.boxlineas.uno{
+	height: 43px;
+    left: 160px;
+    position: absolute;
+    top: 6px;
+    width: 200px;
+}
+
+.boxlineas .vertical{
+	width:50px;
+	height:3px;
+}
+
+.boxlineas.uno .uno{
+	position: absolute;
+	left:0;
+	width: 155px;
+}
+
+.boxlineas.uno .dos{
+	height: 38px;
+    position: absolute;
+    right: 40px;
+}
+
+.boxlineas.uno .tres{
+	position: absolute;
+	right:0;
+	width: 50px;
+	bottom:0;
+}
+
+/************************ PANELES COMO BOTONES ***********************/
+.flujo{
+    padding:0 10px;
+}
+
+.flujo .panel .panel .panel-body{
+	height: 22px;
+    line-height: 1;
+    padding: 3px;
+    position: relative;
+} 
+
+.panel .panel div.boton{
+	cursor: pointer;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+.panel .panel div.boton:hover{
+	background: #ccc;
+}
+
+.badge{
+	background: #648D93;
+    border-radius: 0;
+    float: right;
+    font-size: 16px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    text-shadow: none;
+    top: 0;
+    width: 40px;
+}
+
+.panel .progress{
+	margin-bottom: 5px;
+	background: #333;
+	border:1px solid #333;
+	height: 12px;
+}
+
+.panel .barra{
+	padding:0 40px 0 0;
+	position: relative;
+}
+
+.panel .barra .sr-only{
+    clip: inherit;
+    font-size: 16px;
+    height: 20px;
+    margin: -5px 0 0;
+    overflow: visible;
+    right: 0;
+    top: 0;
+    width: auto;
+    color: #c7254e;
+}
+
+.panel .progress-bar-warning {
+    background-color: #FFAE00;
+}
+
+.panel .progress-bar-success {
+    background-color: #EAEAEA;
+}
+
+.panel .panel-body{
+	padding:5px;
+}
+
+.panel .box_progress{
+	margin: 14px 0 0;
+    padding: 0;
+}
+
+
+strong{
+	color:#675fd6;
+	text-transform: uppercase;
+}
+
+
+.detalle_camiones .panel{
+	cursor:pointer;
+}
+
+.panel .estado{
+	margin: 10px 0 0;
+}
+
+.panel .tipo{
+	margin: 5px 0 0;
+}
+
+
+.mantencion .estado{
+    background: url("../img/icon_reparacion.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    width:24px;
+    height:24px;
+}
+
+.reparacion .estado{
+    background: url("../img/icon_mantencion.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    width:24px;
+    height:24px;
+}
+
+.tipo {
+    background: url("../img/icon_truck.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 35px;
+    width: 60px;
+}
+
+.tipo.maquinaria {
+    background: url("../img/icon_retro.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 35px;
+    width: 60px;
+}
+
+.detalle_camion h1{
+	border:0;
+	background: #fff;
+	color:#333;
+}
+
+.detalle_enespera .panel-heading{
+	position:relative;
+	border-color:#675FD6;
+}
+
+.detalle_enespera .badge{
+	height: 100%;
+    padding: 6px;
+}
+
+.detalle_enespera > .panel{
+	background: none;
+}
+
+.panel-title a{
+	display: block;
+    width: 100%;
+}
+
+.panel-title a:hover{
+	text-decoration: none;
+}
+
+
+.panel.en_espera{
+	position: relative;
+    top: 26px;
+}
+
+.connector{
+	height:30px;
+	margin:0 auto;
+	width:100%;
+	position: relative;
+}
+
+.connector.left{
+    height: 16px;
+    margin: 0 auto;
+    position: absolute;
+    right: -15px;
+    top: 4px;
+    width: 30px;
+    background: none;
+}
+
+.connector.down{
+    background: none;
+}
+
+.content_connector{
+	position:relative;
+}
+
+.content_connector .connector.down{
+    background: none;
+    position: absolute;
+    top: -31px;
+    width: 100%;
+}
+
+.content_connector .connector.up{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 173px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.content_connector .connector.up .barra{
+    left: -15px;
+    top: 100%;
+    width: 54%;
+}
+
+.content_connector .connector.up .barra_down{
+    border: 1px solid #efefef;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 143px;
+    width: 1px;
+}
+
+.content_connector .connector.up .barra_down .barra{
+    left: -43px;
+    position: absolute;
+    top: 27px;
+}
+
+.content_connector .connector.up .barra .barra_up{
+    border: 1px solid #efefef;
+    height: 162px;
+    position: absolute;
+    right: -1px;
+    top: -163px;
+}
+
+.content_connector .connector.up .barra .barra{
+	border: 1px solid #efefef;
+    left: 100%;
+    position: absolute;
+    top: -163px;
+    width: 91%;
+}
+
+.content_connector.dos .connector.up {
+    height: 59px;
+    left: 50%;
+    position: absolute;
+    top: -23px;
+    width: 50%;
+}
+
+.content_connector.dos .connector.up .barra{
+    left: 0;
+    top: 0;
+    width: 103%;
+}
+
+.content_connector.dos .connector.up .barra .barra_up {
+    height: 60px;
+    top: 0;
+}
+
+.content_connector.dos .connector.up .barra .barra_up .right{
+    right: -24px;
+    width: 25px;
+}
+
+.content_connector.tres .connector.up {
+    left: 0;
+    top: 8px;
+}
+
+.content_connector.tres .connector.up .barra{
+    left:-6px;
+    height:1pxs;
+}
+
+.content_connector.tres .connector.up .barra .barra_up{
+    left: -1px;
+    right: inherit;
+    width:1px;
+}
+
+.content_connector.tres .connector.up .barra .barra_up .left{
+    bottom: -8px;
+    overflow: hidden;
+    position: absolute;
+    right: -1px;
+    width: 26px;
+}
+
+
+
+.content_connector .barra{
+    border: 1px solid #efefef;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    width: 162%;
+}
+
+.content_connector .barra.up{
+    border: 1px solid #efefef;
+    left: inherit;
+    position: absolute;
+    left: -24px;
+    top: 12px;
+    width: 0 !important;
+}
+
+.content_connector .barra.up .barra_down{
+    border: 1px solid #efefef;
+    height: 30px;
+    position: absolute;
+    right: -1px;
+    top: -29px;
+}
+
+.content_connector .barra.up .barra_down .barra{
+    border: 1px solid #efefef;
+    position: absolute;
+    width:50%;
+}
+
+.content_connector .barra_down{
+    border: 1px solid #efefef;
+    height: 40px;
+    position: absolute;
+    right: -1px;
+    top: 0;
+}
+
+.content_connector .barra_small{
+    border: 1px solid #efefef;
+    position: absolute;
+    right: -39px;
+    top: 39px;
+    width: 40px;
+}
+
+.content_connector .right{
+    background-position: 100% 0;
+    bottom: -8px;
+    position: absolute;
+    right: -20px;
+    width: 25px;
+    z-index: 1;
+}
+
+.down{
+	background: url(../img/arrow_down.png) no-repeat;
+	height: 31px;
+	width: 16px;
+	margin: 0 auto;
+}
+
+.left{
+	background: url(../img/arrow_left.png) no-repeat;
+	height: 16px;
+	width: 31px;
+	margin: 0 auto;
+}
+
+.right{
+	background: url(../img/arrow_right.png) no-repeat;
+	height: 16px;
+	width: 31px;
+	margin: 0 auto;
+}
+
+/*MEDIAQUERY*/
+@media (max-width: 1200px) and (min-width: 991px){
+    html{
+    
+    }
+
+    .content_connector .barra{
+        width: 165%;
+    }
+}
+
+@media (max-width: 990px) {
+    html{
+    
+    }
+
+    .content_connector .barra{
+        width: 170%;
+    }
+}
+
+@media (max-width: 769px) {
+html{
+
+}
+
+}
+
+@media (max-width: 640px) {
+    html{
+border-left:red solid 10px;
+    }
+
+    .box_destacar strong{
+        display: block;
+    font-size: 15px;
+    }
+
+    .content_connector .barra{
+        width: 175%;
+    }
+}
+
+@media (max-width: 568px) {
+    html{
+border-left:orange solid 10px;
+    }
+
+    .content_connector .barra{
+        width: 184%;
+    }
+}
+@media (max-width: 480px) {
+html{
+border-left:green solid 10px;
+}
+
+}
+@media (max-width: 450px) {
+html{
+    border-left:red solid 10px;
+}
+
+.content_connector .barra{
+        width: 210%;
+    }
+}
+
+
+.collapse .panel{
+    border:#999 solid 1px;
+    margin:0 0 5px;
+}
