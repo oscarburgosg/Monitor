@@ -130,7 +130,7 @@
 						<div class="panel panel-default">
 						  <div class="panel-body">
 						    Ingresados
-						    <span class="badge">14</span>
+						    <span class="badge">15</span>
 						  </div>
 						</div>
 						<div class="connector uno">
@@ -224,7 +224,7 @@
 	                	<div class="panel panel-default">
 						    <div id="boton_ver" class="panel-body boton" onclick="ver_detalle('detalle_camiones')">
 						  		En Diagnóstico
-						    	<span class="badge">2</span>
+						    	<span class="badge">3</span>
 						    </div>
 						</div>
 					</div>
@@ -232,7 +232,7 @@
 						<div class="panel panel-success en_espera">
 						  <div id="boton_enespera" class="panel-body boton" onclick="detalle_enespera('detalle_enespera')">
 						    En espera
-						    <span class="badge">18</span>
+						    <span class="badge">15</span>
 						  </div>
 						</div>
 					</div>
@@ -556,7 +556,7 @@
 		</div>
 	</div>
 
-	<div id="detalle_enespera" style="display:none;">
+	<div id="detalle_enespera" style="display:block;">
 		<div class="panel panel-default no-border no-bg">
 			<div class="panel-heading panel-head no-border">En Espera
 			<button type="button" class="btn btn-default pull-right" onclick="detalle_enespera('detalle_enespera')">
@@ -571,11 +571,11 @@
 		                    <h4 class="panel-title">
 		                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_uno" class="collapsed">
 		                        	En espera diágnóstico
-		                        	<span class="badge">2</span>
+		                        	<span class="badge">3</span>
 		                        </a>
 		                    </h4>
 		                </div>
-		                <div id="collapse_uno" class="panel panel-default panel-collapse collapse no-border no-bg">
+		                <div id="collapse_uno" class="panel panel-default panel-collapse collapse in no-border no-bg">
 					  		<div class="panel-body">
 				                <div class="panel panel-default mantencion">
 									<div class="col-md-1 col-xs-1">
@@ -583,21 +583,70 @@
 										 	<div class="estado"></div>
 										</div>
 									</div>
-									<div class="col-md-1 col-xs-1">
+									<div class="col-md-1 col-xs-2">
 										<div class="panel-body">
 										 	<div class="tipo"></div>
 										</div>
 									</div>
-									<div class="col-md-4 col-xs-4">
+									<div class="col-md-4 col-xs-3">
 									 	<div class="panel-body">
-											Constructora Excon<br/>
-											FD TR 47 – NI : 142
+											Antares Maquinarías<br/>
+											ZS 78 79 - NI: 421
 										</div>
 									</div>
 									<div class="col-md-2 col-xs-2">
 									 	<div class="panel-body">
 											Recepción: (7)<br/>
-											21/11  9:15 AM
+											31/12  9:15 AM
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body box_progress">
+									 		<div class="barra">
+										 		<div class="progress">
+													<div class="progress-bar progress-bar-success" style="width: 70%">
+													</div>
+												</div>
+												<span class="sr-only">70%</span>
+											</div>
+											<div class="barra">
+												<div class="progress">
+												  <div class="progress-bar progress-bar-success" style="width: 50%">
+												  </div>
+												</div>
+												<span class="sr-only">50%</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Prom. entrega:<br/>
+											Por definir
+										</div>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<div class="panel panel-default reparacion">
+									<div class="col-md-1 col-xs-1">
+										<div class="panel-body">
+										 	<div class="estado"></div>
+										</div>
+									</div>
+									<div class="col-md-1 col-xs-2">
+										<div class="panel-body">
+										 	<div class="tipo"></div>
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-3">
+									 	<div class="panel-body">
+											Asfalmix S.A.<br/>
+											ZS 78 79 - NI: 421
+										</div>
+									</div>
+									<div class="col-md-2 col-xs-2">
+									 	<div class="panel-body">
+											Recepción: (7)<br/>
+											21/12  9:15 AM
 										</div>
 									</div>
 									<div class="col-md-2 col-xs-2">
@@ -632,64 +681,15 @@
 										 	<div class="estado"></div>
 										</div>
 									</div>
-									<div class="col-md-1 col-xs-1">
-										<div class="panel-body">
-										 	<div class="tipo"></div>
-										</div>
-									</div>
-									<div class="col-md-4 col-xs-4">
-									 	<div class="panel-body">
-											Constructora Excon<br/>
-											FD TR 47 – NI : 142
-										</div>
-									</div>
-									<div class="col-md-2 col-xs-2">
-									 	<div class="panel-body">
-											Recepción: (7)<br/>
-											21/11  9:15 AM
-										</div>
-									</div>
-									<div class="col-md-2 col-xs-2">
-									 	<div class="panel-body box_progress">
-									 		<div class="barra">
-										 		<div class="progress">
-													<div class="progress-bar progress-bar-warning" style="width: 100%">
-													</div>
-												</div>
-												<span class="sr-only">100%</span>
-											</div>
-											<div class="barra">
-												<div class="progress">
-												  <div class="progress-bar progress-bar-success" style="width: 50%">
-												  </div>
-												</div>
-												<span class="sr-only">50%</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 col-xs-2">
-									 	<div class="panel-body">
-											Prom. entrega:<br/>
-											Por definir
-										</div>
-									</div>
-									<div class="clear"></div>
-								</div>
-								<div class="panel panel-default reparacion">
-									<div class="col-md-1 col-xs-1">
-										<div class="panel-body">
-										 	<div class="estado"></div>
-										</div>
-									</div>
-									<div class="col-md-1 col-xs-1">
+									<div class="col-md-1 col-xs-2">
 										<div class="panel-body">
 										 	<div class="tipo maquinaria"></div>
 										</div>
 									</div>
-									<div class="col-md-4 col-xs-4">
+									<div class="col-md-4 col-xs-3">
 									 	<div class="panel-body">
-											Constructora Excon<br/>
-											FD TR 47 – NI : 142
+											Canteras Lonco S.A.<br/>
+											ZS 78 79 - NI: 421
 										</div>
 									</div>
 									<div class="col-md-2 col-xs-2">

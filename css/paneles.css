@@ -26,25 +26,6 @@
 	float:right;
 }
 
-/********** lista_tareas *******/
-
-@media (max-width: 1280px) and (min-width: 1024px){
-	
-	html{
-		
-	}
-
-}
-
-@media (max-width: 980px) {
-	
-	html{
-		border-top:green solid 1px;
-	}
-
-}
-
-
 /******************************************************************/
 /*************************       FLECHAS    ***********************/
 .boxflecha{
@@ -535,4 +516,10 @@ html{
 .content_connector .barra{
         width: 210%;
     }
+}
+
+
+.collapse .panel{
+    border:#999 solid 1px;
+    margin:0 0 5px;
 }
